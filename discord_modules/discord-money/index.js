@@ -1,4 +1,4 @@
-const err = require('errormsg');
+const err = require('./discord_modules/errormsg');
 const sqlite3 = require('sqlite3').verbose();
 
 module.exports = { // This uses chaining instead of serializing
