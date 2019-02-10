@@ -1,13 +1,19 @@
 {
-  "name": "AssemblyBot",
-  "description": "AssemblyBot",
-  "version": "0.0.0",
+  "name": "assembly.bot",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "11.4.2",
-    "request": "2.81.0"
+    "discord-money": "^0.2.0",
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "moment": "^2.24.0",
+    "parse-ms": "^2.0.0",
+    "sqlite3": "^4.0.6"
   }
 }
