@@ -1,7 +1,7 @@
-//global.errmsg = "";
+global.errmsg = "";
 const errormsg = require('errormsg');
 const sqlite3 = require('sqlite3').verbose();
-
+module.exports = global.errmsg;
 module.exports = { // This uses chaining instead of serializing
 
     updateBal: function(userID, increase, pay) {
