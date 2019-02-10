@@ -1,9 +1,9 @@
 
 
 
-    const Discord = require('discord.js-commando');
-    const money = require('discord-money');
-    const moment = require('moment');
+    const Discord = require('discord.js');
+    //const money = require('discord-money');
+    //const moment = require('moment');
     // Define client for Discord
     const client = new Discord.Client();
 
