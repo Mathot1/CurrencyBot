@@ -42,6 +42,7 @@ module.exports = { // This uses chaining instead of serializing
                            increase = 0;
                            pay = 0;
                            returnDb();
+                           return;
                          }
                        else {
                         db.run(`UPDATE moneyset SET money = '${row.money + increase}' WHERE userID = '${userID}'`)
