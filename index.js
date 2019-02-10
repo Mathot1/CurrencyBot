@@ -15,7 +15,7 @@ let prefix = '!';
 
         client.on("guildMemberAdd", function(member) {
 
-          member.send("**Welcome to the Assemblyline server!**");
+          member.send("**Welcome to the Assemblyline server!**\n I am assemblybot, type !help for commands");
           let memberRole = member.guild.roles.find("name", "public");
           member.addRole(memberRole);
         });
