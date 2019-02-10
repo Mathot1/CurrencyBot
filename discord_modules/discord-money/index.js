@@ -39,6 +39,7 @@ module.exports = { // This uses chaining instead of serializing
                     }
                     else {
                          if (-pay > row.money) {
+                           increase = 0;
                            pay = 0;
                            returnDb();
                          }
