@@ -43,7 +43,7 @@ module.exports = { // This uses chaining instead of serializing
                            //pay = 0;
                            name = "aaaaaaaaaaaaa";
                            returnDb();
-                           closeDb();
+                           //closeDb();
                            //return;
                          }
                        else {

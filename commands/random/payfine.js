@@ -36,10 +36,12 @@ class PayFineCommand extends Discord.Command {
 
     console.log(piece[0]);
     console.log(piece[1]);
-    money.updateBal(piece[0], -piece[1], -piece[1]).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
+    money.updateBal(piece[0], -piece[1], -piece[1]).then((i) => {
+      console.log(money.name); // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
    if (money.name != ""){
       message.reply(piece[0] + '** has not enough money!**');
       money.name = "";
+      console.log(money.name);
     }
       else if (piece[1] > 1){
 
