@@ -1,4 +1,4 @@
-const err = require('./discord_modules/errormsg');
+//const err = require('./discord_modules/errormsg');
 //const errormsg = require('errormsg');
 const Discord = require('discord.js-commando');
 const money = require('discord-money');

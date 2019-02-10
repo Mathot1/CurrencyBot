@@ -1,6 +1,6 @@
 
 
-
+    const hapl = require('./err.js');
     const Discord = require('discord.js-commando');
     const money = require('discord-money');
     const moment = require('moment');
@@ -26,10 +26,10 @@ let prefix = '!';
 
         // Prefix
 
-
+        halp.getName();
 
         // Example: Getting a daily reward
-        
+
 
 
     });
