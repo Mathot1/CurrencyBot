@@ -23,7 +23,7 @@ class PayFineCommand extends Discord.Command {
 
     }
     else {
-
+ 
 
     var pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
     let piece = args.split(" ");
