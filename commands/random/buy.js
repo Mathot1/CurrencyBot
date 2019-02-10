@@ -1,5 +1,5 @@
 //const errormsg = require('errormsg');
-const aws = require('aws-sdk');
+
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
 

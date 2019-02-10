@@ -2,7 +2,7 @@
 //const errormsg = require('errormsg');
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
-const aws = require('aws-sdk');
+
 
 class PayFineCommand extends Discord.Command {
 

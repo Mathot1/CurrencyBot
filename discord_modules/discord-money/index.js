@@ -1,8 +1,7 @@
-//errmsg = "";
-const errormsg = require('errormsg');
+
 const sqlite3 = require('sqlite3').verbose();
 //module.exports = errmsg;
-const aws = require('aws-sdk');
+
 module.exports = { // This uses chaining instead of serializing
 
     updateBal: function(userID, increase, pay) {
@@ -40,7 +39,7 @@ module.exports = { // This uses chaining instead of serializing
                     }
                     else {
                          if (-pay > row.money) {
-                           errmsg = '**You have not enough money!**';
+                           pay = 0;
                            returnDb();
                          }
                        else {
