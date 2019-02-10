@@ -29,7 +29,7 @@ let prefix = '!';
 
 
         // Example: Getting a daily reward
-        
+
 
 
     });
@@ -38,4 +38,4 @@ let prefix = '!';
 
 
 
-client.login('NTM4NjQ5NzkwMDgzMzY2OTEy.DzWwHA.YOqZAs2byDBxt2d483srT7NqFTU');
+client.login(process.env.BOT_TOKEN);
