@@ -1,4 +1,3 @@
-module.exports = {
-  global.errmsg = "";
+global.errmsg = "";
 
-};
+module.exports = errmsg;
