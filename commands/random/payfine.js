@@ -23,7 +23,7 @@ class PayFineCommand extends Discord.Command {
 
     }
     else {
- 
+
 
     var pUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
     let piece = args.split(" ");
@@ -37,11 +37,11 @@ class PayFineCommand extends Discord.Command {
     console.log(piece[0]);
     console.log(piece[1]);
     money.updateBal(piece[0], -piece[1], -piece[1]).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-   //if (errmsg != ""){
-    //  message.reply(piece[0] + '** has not enough money!**');
-    //  errmsg = "";
-  //  }
-       if (piece[1] > 1){
+   if (money.name != ""){
+      message.reply(piece[0] + '** has not enough money!**');
+      money.name = "";
+    }
+      else if (piece[1] > 1){
 
         message.channel.send(`**${piece[0]} paid fine of** ${piece[1]} **AssemblyCoins!**\n**New Balance:** ${i.money}`);
       }

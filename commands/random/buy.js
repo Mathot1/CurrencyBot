@@ -42,9 +42,9 @@ if (!message.member.roles.has(adm.id)) {
         else {
 
         money.updateBal(autor, -50, -50).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-       if (errmsg != ""){
+       if (money.name != ""){
           message.reply('**You have not enough money!**');
-          errmsg = "";
+          money.name = "";
         }
         else {
           message.member.addRole(memberRole1);

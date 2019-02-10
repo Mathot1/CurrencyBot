@@ -1,7 +1,7 @@
 
 const sqlite3 = require('sqlite3').verbose();
-//module.exports = errmsg;
-
+var name = "";
+exports.name = name;
 module.exports = { // This uses chaining instead of serializing
 
     updateBal: function(userID, increase, pay) {
@@ -39,11 +39,12 @@ module.exports = { // This uses chaining instead of serializing
                     }
                     else {
                          if (-pay > row.money) {
-                           increase = 0;
-                           pay = 0;
+                           //increase = 0;
+                           //pay = 0;
+                           name = "aaaaaaaaaaaaa";
                            returnDb();
                            closeDb();
-                           return;
+                           //return;
                          }
                        else {
                         db.run(`UPDATE moneyset SET money = '${row.money + increase}' WHERE userID = '${userID}'`)
