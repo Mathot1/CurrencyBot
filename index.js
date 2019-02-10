@@ -26,7 +26,7 @@ let prefix = '!';
 
         // Prefix
 
-        halp.getName();
+      //  halp.getName();
 
         // Example: Getting a daily reward
 
