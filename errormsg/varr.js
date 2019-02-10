@@ -1,3 +1,0 @@
-errmsg = "";
-
-module.exports = errmsg;

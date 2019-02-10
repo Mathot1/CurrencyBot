@@ -1,4 +1,4 @@
-//const errormsg = require('errormsg');
+const err = require('errormsg');
 
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
@@ -42,9 +42,9 @@ if (!message.member.roles.has(adm.id)) {
         else {
 
         money.updateBal(autor, -50, -50).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-       if (money.name != ""){
+       if (err.errmsg != ""){
           message.reply('**You have not enough money!**');
-          money.name = "";
+          err.errmsg = "";
         }
         else {
           message.member.addRole(memberRole1);

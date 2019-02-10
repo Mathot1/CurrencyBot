@@ -1,4 +1,4 @@
-
+const err = require('errormsg');
 //const errormsg = require('errormsg');
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
@@ -37,11 +37,11 @@ class PayFineCommand extends Discord.Command {
     console.log(piece[0]);
     console.log(piece[1]);
     money.updateBal(piece[0], -piece[1], -piece[1]).then((i) => {
-      console.log(money.name); // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-   if (money.name != ""){
+      console.log(err.errmsg); // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
+   if (err.errmsg != ""){
       message.reply(piece[0] + '** has not enough money!**');
-      money.name = "";
-      console.log(money.name);
+      err.errmsg = "";
+      console.log(err.errmsg);
     }
       else if (piece[1] > 1){
 
