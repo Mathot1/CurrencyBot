@@ -1,4 +1,4 @@
-global.errmsg = "";
+
 
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
