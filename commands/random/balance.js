@@ -1,5 +1,6 @@
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
+const hapl = require('./err.js');
 class BalanceCommand extends Discord.Command {
 
 constructor(client){
@@ -21,6 +22,7 @@ let tablica = args.split(" ");
 let autor = "<@" + message.author.id + ">";
   //console.log(tablica[0]);
   //console.log(autor);
+  hapl.getName();
   //console.log(tablica[0].charAt(2));
   let adm = message.guild.roles.find("name", "mad");
   if (!message.member.roles.has(adm.id)) {
