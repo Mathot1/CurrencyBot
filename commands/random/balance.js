@@ -1,6 +1,6 @@
 const Discord = require('discord.js-commando');
 const money = require('discord-money');
-const hapl = require('./err.js');
+const hapl = require('.../err.js');
 class BalanceCommand extends Discord.Command {
 
 constructor(client){
