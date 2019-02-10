@@ -1,3 +1,3 @@
-global.errmsg = "";
+errmsg = "";
 
 module.exports = errmsg;
