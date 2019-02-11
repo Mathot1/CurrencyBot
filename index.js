@@ -24,7 +24,15 @@ let prefix = '!';
     client.on('message', message => {
 
 
+              // Example: Fetching Balance
+              if (message.content.toUpperCase() === `${prefix}TESTT`) {
 
+                // money.fetchBal grabs the userID, finds it, and puts it into 'i'.
+                      message.channel.send(`test`);
+
+
+
+              }
 
     });
 
