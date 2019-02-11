@@ -146,7 +146,7 @@ if (!message.member.roles.has(adm.id)) {
                 break;
 
         default:
-        message.reply('**Wrong item id! Check !shop list**');
+        message.reply('**Wrong item id! Check *!shop list***');
         break;
       }
 
