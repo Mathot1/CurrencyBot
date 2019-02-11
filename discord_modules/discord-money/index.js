@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 module.exports = { // This uses chaining instead of serializing
 
 
-    updateBal: function(userID, increase, pay, errmsg) {
+    updateBal: function(userID, increase, pay) {
 
         const getInfo = new Promise((resolve,error) => {
 

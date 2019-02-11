@@ -40,19 +40,17 @@ if (!message.member.roles.has(adm.id)) {
           message.reply(`**You already have this role!**`);
         }
         else {
-
-        money.updateBal(autor, -50, -50).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-       if (err.errmsg != ""){
-          message.reply('**You have not enough money!**');
-          err.errmsg = "";
-        }
-        else {
+          if (piece[1] > i.money){
+            message.channel.send(autor + '** has not enough money!**');
+          }
+          else {
+        money.updateBal(autor, -50, -50).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'
           message.member.addRole(memberRole1);
           message.reply(`** bought a new role for** 50 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
 
-        }
     })
   }
+}
           break;
 
           case 2:
@@ -62,14 +60,13 @@ if (!message.member.roles.has(adm.id)) {
             message.reply(`**You already have this role!**`);
           }
             else {
-
+              if (piece[1] > i.money){
+                message.channel.send(autor + '** has not enough money!**');
+              }
+              else {
 
           money.updateBal(autor, -100, -100).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-         if (errmsg != ""){
-            message.reply('**You have not enough money!**');
-            errmsg = "";
-          }
-          else {
+
 
 
             // message.member.guild.createRole({
@@ -84,9 +81,10 @@ if (!message.member.roles.has(adm.id)) {
             message.member.addRole(memberRole2);
             message.reply(`** bought a new role for** 100 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
 
-          }
+
       })
     }
+  }
             break;
 
             case 3:
@@ -96,58 +94,50 @@ if (!message.member.roles.has(adm.id)) {
               message.reply(`**You already have this role!**`);
             }
             else {
-
+              if (piece[1] > i.money){
+                message.channel.send(autor + '** has not enough money!**');
+              }
+              else {
             money.updateBal(autor, -1000, -1000).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-           if (errmsg != ""){
-              message.reply('**You have not enough money!**');
-              errmsg = "";
-            }
-            else {
-
               message.member.addRole(memberRole3);
               message.reply(`** bought a new role for** 1000 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
 
-            }
         })
       }
+    }
               break;
               case 4:
-
-
-              money.updateBal(autor, -420, -420).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-             if (errmsg != ""){
-                message.reply('**You have not enough money!**');
-                errmsg = "";
+              if (piece[1] > i.money){
+                message.channel.send(autor + '** has not enough money!**');
               }
               else {
 
-                //message.reply(`** bought a new role for** 500 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+              money.updateBal(autor, -420, -420).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
+
                 message.reply(`** bought a new samplepack for** 420 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
                 message.channel.id = '543923383952343041';
                 message.channel.send(autor + " Has bought a sihiu sample pack!");
-              }
-          })
 
+          })
+}
                 break;
                 case 5:
-                money.updateBal(autor, -444, -444).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
-               if (errmsg != ""){
-                  message.reply('**You have not enough money!**');
-                  errmsg = "";
+                if (piece[1] > i.money){
+                  message.channel.send(autor + '** has not enough money!**');
                 }
                 else {
+                money.updateBal(autor, -444, -444).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
 
-                  //message.reply(`** bought a new role for** 500 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
                   message.reply(`** bought a new samplepack for** 444 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
                   message.channel.id = '543923383952343041';
                   message.channel.send(autor + " Has bought a ankou sample pack!");
-                }
-            })
 
+            })
+}
                 break;
 
         default:
-        message.reply('**Wrong item id!**');
+        message.reply('**Wrong item id! Check !shop list**');
         break;
       }
 

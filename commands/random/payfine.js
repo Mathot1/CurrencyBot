@@ -43,7 +43,7 @@ class PayFineCommand extends Discord.Command {
 
     money.fetchBal(piece[0]).then((i) => {
       if (piece[1] > i.money){
-        message.reply(piece[0] + '** has not enough money!**');
+        message.channel.send(piece[0] + '** has not enough money!**');
       }
       else {
 
