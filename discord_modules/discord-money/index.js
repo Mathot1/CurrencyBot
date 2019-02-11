@@ -40,7 +40,7 @@ module.exports = { // This uses chaining instead of serializing
                     else {
                       console.log(pay);
                       console.log(row.money);
-                         if (pay > row.money) {
+                         if (-pay > row.money) {
                            console.log(pay);
                            console.log(increase);
                            increase = 0;
