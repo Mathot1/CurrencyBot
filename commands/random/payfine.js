@@ -44,10 +44,10 @@ class PayFineCommand extends Discord.Command {
     money.fetchBal(piece[0]).then((i) => {
       if (piece[1] > i.money){
         message.reply(piece[0] + '** has not enough money!**');
-        return;
       }
+      else {
 
-});
+
 
     money.updateBal(piece[0], -piece[1], -piece[1], "").then((i) => {
 
@@ -65,6 +65,7 @@ class PayFineCommand extends Discord.Command {
       }
 
   })
+}});
 }
 
   }
