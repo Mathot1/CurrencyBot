@@ -50,7 +50,7 @@ module.exports = { // This uses chaining instead of serializing
                            returnDb();
                          }
                        else {
-                      //  db.run(`UPDATE moneyset SET money = '${row.money + increase}' WHERE userID = '${userID}'`)
+                       db.run(`UPDATE moneyset SET money = '${row.money + increase}' WHERE userID = '${userID}'`)
                         db.get(`SELECT * FROM moneyset WHERE userID = '${userID}'`, function(err, row) {
                             response = row;
                             returnDb();
