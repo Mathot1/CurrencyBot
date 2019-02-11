@@ -1,9 +1,10 @@
-//const err = require('./discord_modules/errormsg');
+
 const sqlite3 = require('sqlite3').verbose();
 
 module.exports = { // This uses chaining instead of serializing
 
-    updateBal: function(userID, increase, pay) {
+
+    updateBal: function(userID, increase, pay, errmsg) {
 
         const getInfo = new Promise((resolve,error) => {
 
@@ -40,7 +41,7 @@ module.exports = { // This uses chaining instead of serializing
                          if (-pay > row.money) {
                            //increase = 0;
                            //pay = 0;
-                           err.errmsg = "aaaaaaaaaaaaa";
+                           errmsg = "aaaaaaaaaaaaa";
                            returnDb();
                            //closeDb();
                            //return;
