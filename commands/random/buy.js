@@ -40,6 +40,7 @@ if (!message.member.roles.has(adm.id)) {
           message.reply(`**You already have this role!**`);
         }
         else {
+          money.fetchBal(autor).then((i) => {
           if (piece[1] > i.money){
             message.channel.send(autor + '** has not enough money!**');
           }
@@ -50,6 +51,7 @@ if (!message.member.roles.has(adm.id)) {
 
     })
   }
+})
 }
           break;
 
@@ -60,6 +62,7 @@ if (!message.member.roles.has(adm.id)) {
             message.reply(`**You already have this role!**`);
           }
             else {
+              money.fetchBal(autor).then((i) => {
               if (piece[1] > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
@@ -84,7 +87,8 @@ if (!message.member.roles.has(adm.id)) {
 
       })
     }
-  }
+  })
+}
             break;
 
             case 3:
@@ -94,6 +98,7 @@ if (!message.member.roles.has(adm.id)) {
               message.reply(`**You already have this role!**`);
             }
             else {
+              money.fetchBal(autor).then((i) => {
               if (piece[1] > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
@@ -104,9 +109,11 @@ if (!message.member.roles.has(adm.id)) {
 
         })
       }
-    }
+    })
+  }
               break;
               case 4:
+              money.fetchBal(autor).then((i) => {
               if (piece[1] > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
@@ -119,9 +126,10 @@ if (!message.member.roles.has(adm.id)) {
                 message.channel.send(autor + " Has bought a sihiu sample pack!");
 
           })
-}
+}})
                 break;
                 case 5:
+                money.fetchBal(autor).then((i) => {
                 if (piece[1] > i.money){
                   message.channel.send(autor + '** has not enough money!**');
                 }
@@ -134,6 +142,7 @@ if (!message.member.roles.has(adm.id)) {
 
             })
 }
+})
                 break;
 
         default:
