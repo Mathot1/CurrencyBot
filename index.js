@@ -10,7 +10,7 @@
     client.registry.registerCommandsIn(__dirname + "/commands");
       // This runs when a message is recieved...
 let prefix = '!';
- 
+
         client.on("guildMemberAdd", function(member) {
 
           member.send("**Welcome to the Assemblyline server!**");
