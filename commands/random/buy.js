@@ -41,7 +41,7 @@ if (!message.member.roles.has(adm.id)) {
         }
         else {
           money.fetchBal(autor).then((i) => {
-          if (piece[1] > i.money){
+          if (50 > i.money){
             message.channel.send(autor + '** has not enough money!**');
           }
           else {
@@ -63,7 +63,7 @@ if (!message.member.roles.has(adm.id)) {
           }
             else {
               money.fetchBal(autor).then((i) => {
-              if (piece[1] > i.money){
+              if (100 > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
               else {
@@ -99,7 +99,7 @@ if (!message.member.roles.has(adm.id)) {
             }
             else {
               money.fetchBal(autor).then((i) => {
-              if (piece[1] > i.money){
+              if (1000 > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
               else {
@@ -114,7 +114,7 @@ if (!message.member.roles.has(adm.id)) {
               break;
               case 4:
               money.fetchBal(autor).then((i) => {
-              if (piece[1] > i.money){
+              if (420 > i.money){
                 message.channel.send(autor + '** has not enough money!**');
               }
               else {
@@ -130,7 +130,7 @@ if (!message.member.roles.has(adm.id)) {
                 break;
                 case 5:
                 money.fetchBal(autor).then((i) => {
-                if (piece[1] > i.money){
+                if (444 > i.money){
                   message.channel.send(autor + '** has not enough money!**');
                 }
                 else {
