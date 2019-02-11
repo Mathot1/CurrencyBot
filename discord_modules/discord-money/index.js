@@ -38,6 +38,7 @@ module.exports = { // This uses chaining instead of serializing
                         insertRows();
                     }
                     else {
+                      console.log(pay);
                          if (-pay > row.money) {
                            console.log(pay);
                            console.log(increase);
