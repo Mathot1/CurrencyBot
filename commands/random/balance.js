@@ -22,7 +22,6 @@ let tablica = args.split(" ");
 let autor = "<@" + message.author.id + ">";
   //console.log(tablica[0]);
   //console.log(autor);
-  hapl.getName();
   //console.log(tablica[0].charAt(2));
   let adm = message.guild.roles.find("name", "mad");
   if (!message.member.roles.has(adm.id)) {
