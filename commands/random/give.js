@@ -20,7 +20,7 @@ class GiveCommand extends Discord.Command {
 
     let adm = message.guild.roles.find("name", "honda");
     if (!message.member.roles.has(adm.id)) {
-
+	return;
     }
     else {
 
