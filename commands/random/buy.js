@@ -45,7 +45,7 @@ if (!message.member.roles.has(adm.id)) {
             message.channel.send(autor + '** has not enough money!**');
           }
           else {
-        money.updateBal(autor, -50, -50).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'
+        money.updateBal(autor, -10, -10).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'
           message.member.addRole(memberRole1);
           message.reply(`** bought a new role for** 50 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
 

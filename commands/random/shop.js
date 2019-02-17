@@ -46,7 +46,7 @@ class ShopCommand extends Discord.Command {
  },
 {
   name:"**Price**",
-  value: "50\n100\n1000\n420\n444",
+  value: "10\n100\n1000\n420\n444",
   inline:true
 }
 ]
