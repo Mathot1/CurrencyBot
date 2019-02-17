@@ -24,10 +24,7 @@ class PayCommand extends Discord.Command {
     let autor = "<@" + message.author.id + ">";
     //console.log(piece[0]);
     //console.log(autor);
-    let adm = message.guild.roles.find("name", "mad");
-    if (!message.member.roles.has(adm.id)) {
-      return;
-    }
+    
 
 
     if (piece[0].charAt(2) == "!") {

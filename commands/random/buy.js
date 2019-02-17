@@ -27,10 +27,7 @@ class BuyCommand extends Discord.Command {
   //  console.log(piece[1]);
       args = parseInt(args);
 let autor = "<@" + message.author.id + ">";;
-let adm = message.guild.roles.find("name", "mad");
-if (!message.member.roles.has(adm.id)) {
-  return;
-}
+
       console.log(args);
       switch (args) {
         case 1:

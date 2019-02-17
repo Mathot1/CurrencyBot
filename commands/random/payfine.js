@@ -18,7 +18,7 @@ class PayFineCommand extends Discord.Command {
 
   async run(message, args){
 
-    let adm = message.guild.roles.find("name", "mad");
+    let adm = message.guild.roles.find("name", "honda");
     if (!message.member.roles.has(adm.id)) {
 
     }

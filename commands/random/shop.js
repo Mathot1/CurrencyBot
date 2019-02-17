@@ -19,10 +19,6 @@ class ShopCommand extends Discord.Command {
   async run(message, args){
 
     //let tablica = args.split(" ");
-    let adm = message.guild.roles.find("name", "mad");
-    if (!message.member.roles.has(adm.id)) {
-      return;
-    }
     if (args === "list") {
       const memberRole1 = message.member.guild.roles.find("name", "birb");
       const memberRole2 = message.member.guild.roles.find("name", "assembler");

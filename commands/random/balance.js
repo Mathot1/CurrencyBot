@@ -23,10 +23,7 @@ let autor = "<@" + message.author.id + ">";
   //console.log(tablica[0]);
   //console.log(autor);
   //console.log(tablica[0].charAt(2));
-  let adm = message.guild.roles.find("name", "mad");
-  if (!message.member.roles.has(adm.id)) {
-    return;
-  }
+  
   if (tablica[0].charAt(2) == "!") {
     tablica[0] = tablica[0].replace("!", "");
   }

@@ -29,7 +29,7 @@ class WeeklyCommand extends Discord.Command {
                   money.updateBal(autor, 20).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
                       message.channel.send({embed: {
                           color: 3447003,
-                          description: 'Recieved your **20** \`!weekly`\. Check \`!balance\`.',
+                          description: 'Recieved your **20** \`!daily`\. Check \`!balance\`.',
                           author: {
                               name: `${message.author.username}#${message.author.discriminator}`,
                               icon_url: message.author.avatarURL
@@ -39,7 +39,7 @@ class WeeklyCommand extends Discord.Command {
               } else {
                   message.channel.send({embed: {
                       color: 3447003,
-                      description: 'You already recieved your \`!weekly`\. Check later **' + moment().endOf('day').fromNow() + '**.', // When you got your daily already, this message will show up.
+                      description: 'You already recieved your \`!daily`\. Check later **' + moment().endOf('day').fromNow() + '**.', // When you got your daily already, this message will show up.
                       author: {
                           name: `${message.author.username}#${message.author.discriminator}`,
                           icon_url: message.author.avatarURL
