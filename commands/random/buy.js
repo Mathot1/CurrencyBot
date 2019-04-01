@@ -10,7 +10,7 @@ class BuyCommand extends Discord.Command {
       name: 'buy',
       group: 'random',
       memberName: 'buy',
-      description: 'Use this to buy for example a role'
+      description: 'Use this to buy something from the shop'
     })
 
   }
@@ -38,13 +38,13 @@ let autor = "<@" + message.author.id + ">";;
         }
         else {
           money.fetchBal(autor).then((i) => {
-          if (50 > i.money){
-            message.channel.send(autor + '** has not enough money!**');
+          if (10 > i.money){
+            message.channel.send(autor + '** has not enough coins!**');
           }
           else {
         money.updateBal(autor, -10, -10).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'
           message.member.addRole(memberRole1);
-          message.reply(`** bought a new role for** 50 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+          message.reply(`** bought a new role for** 10 **assemblyCoins!**\n**New Balance:** ${i.money}`);
 
     })
   }
@@ -61,7 +61,7 @@ let autor = "<@" + message.author.id + ">";;
             else {
               money.fetchBal(autor).then((i) => {
               if (100 > i.money){
-                message.channel.send(autor + '** has not enough money!**');
+                message.channel.send(autor + '** has not enough coins!**');
               }
               else {
 
@@ -79,7 +79,7 @@ let autor = "<@" + message.author.id + ">";;
             // })
 
             message.member.addRole(memberRole2);
-            message.reply(`** bought a new role for** 100 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+            message.reply(`** bought a new role for** 100 **assemblyCoins!**\n**New Balance:** ${i.money}`);
 
 
       })
@@ -97,12 +97,12 @@ let autor = "<@" + message.author.id + ">";;
             else {
               money.fetchBal(autor).then((i) => {
               if (1000 > i.money){
-                message.channel.send(autor + '** has not enough money!**');
+                message.channel.send(autor + '** has not enough coins!**');
               }
               else {
             money.updateBal(autor, -1000, -1000).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
               message.member.addRole(memberRole3);
-              message.reply(`** bought a new role for** 1000 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+              message.reply(`** bought a new role for** 1000 **assemblyCoins!**\n**New Balance:** ${i.money}`);
 
         })
       }
@@ -112,13 +112,13 @@ let autor = "<@" + message.author.id + ">";;
               case 4:
               money.fetchBal(autor).then((i) => {
               if (420 > i.money){
-                message.channel.send(autor + '** has not enough money!**');
+                message.channel.send(autor + '** has not enough coins!**');
               }
               else {
 
               money.updateBal(autor, -420, -420).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
 
-                message.reply(`** bought a new samplepack for** 420 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+                message.reply(`** bought a new samplepack for** 420 **assemblyCoins!**\n**New Balance:** ${i.money}`);
                 message.channel.id = '543923383952343041';
                 message.channel.send(autor + " Has bought a sihiu sample pack!");
 
@@ -127,13 +127,13 @@ let autor = "<@" + message.author.id + ">";;
                 break;
                 case 5:
                 money.fetchBal(autor).then((i) => {
-                if (444 > i.money){
-                  message.channel.send(autor + '** has not enough money!**');
+                if (400 > i.money){
+                  message.channel.send(autor + '** has not enough coins!**');
                 }
                 else {
-                money.updateBal(autor, -444, -444).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
+                money.updateBal(autor, -400, -400).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
 
-                  message.reply(`** bought a new samplepack for** 444 **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+                  message.reply(`** bought a new samplepack for** 400 **assemblyCoins!**\n**New Balance:** ${i.money}`);
                   message.channel.id = '543923383952343041';
                   message.channel.send(autor + " Has bought a ankou sample pack!");
 

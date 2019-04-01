@@ -6,14 +6,16 @@
     const client = new Discord.Client();
 
     client.registry.registerGroup('random', 'AssemblyCoin');
+    client.registry.registerGroup('admin', 'Admin');
     client.registry.registerDefaults();
     client.registry.registerCommandsIn(__dirname + "/commands");
       // This runs when a message is recieved...
 let prefix = '!';
+const time = setInterval(function(){ console.log('<<< 3 hours >>>');},10800000);
 
         client.on("guildMemberAdd", function(member) {
 
-          member.send("**Welcome to the Assemblyline server!**");
+          //member.send("**Welcome to the Assemblyline server!**");
           let memberRole = member.guild.roles.find("name", "public");
           member.addRole(memberRole);
         });
@@ -39,4 +41,4 @@ let prefix = '!';
 
 
 
-client.login(process.env.BOT_TOKEN);
+client.login("NTQzOTA3MDc3OTUzNjgzNDk0.D2aM0w._uyu3XAVdbbN8Al7lOwX1fxQw3o");

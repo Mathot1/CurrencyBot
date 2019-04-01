@@ -9,9 +9,9 @@ class PayFineCommand extends Discord.Command {
   constructor(client){
     super(client, {
       name: 'payfine',
-      group: 'random',
+      group: 'admin',
       memberName: 'payfine',
-      description: '**ADMIN ONLY** Use it to take money from someone'
+      description: 'Use it to take money from someone'
     })
 
   }
@@ -19,8 +19,9 @@ class PayFineCommand extends Discord.Command {
   async run(message, args){
 
     let adm = message.guild.roles.find("name", "honda");
-    if (!message.member.roles.has(adm.id)) {
-
+    let adm2 = message.guild.roles.find("name", "mad");
+    if (!message.member.roles.has(adm.id) && !message.member.roles.has(adm2.id)) {
+	return;
     }
     else {
 
@@ -43,7 +44,7 @@ class PayFineCommand extends Discord.Command {
 
     money.fetchBal(piece[0]).then((i) => {
       if (piece[1] > i.money){
-        message.channel.send(piece[0] + '** has not enough money!**');
+        message.channel.send(piece[0] + '** has not enough coins!**');
       }
       else {
 
@@ -55,10 +56,10 @@ class PayFineCommand extends Discord.Command {
 
        if (piece[1] > 1){
 
-        message.channel.send(`**${piece[0]} paid fine of** ${piece[1]} **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+        message.channel.send(`**${piece[0]} paid fine of** ${piece[1]} **assemblyCoins!**\n**New Balance:** ${i.money}`);
       }
       else if (piece[1] == 1) {
-          message.channel.send(`**${piece[0]} paid fine of** ${piece[1]} **AssemblyCoin!**\n**New Balance:** ${i.money}`);
+          message.channel.send(`**${piece[0]} paid fine of** ${piece[1]} **assemblyCoins!**\n**New Balance:** ${i.money}`);
         }
       else if (piece[1] < 1) {
           message.reply('**Wrong number!**');

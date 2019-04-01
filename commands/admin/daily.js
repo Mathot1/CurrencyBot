@@ -10,16 +10,16 @@ class WeeklyCommand extends Discord.Command {
   constructor(client){
     super(client, {
       name: 'daily',
-      group: 'random',
+      group: 'admin',
       memberName: 'daily',
-      description: '**ADMIN ONLY** Use it to receive daily amount of money'
+      description: 'Use it to receive daily amount of money'
     })
 
   }
 
   async run(message, args){
     let autor = "<@" + message.author.id + ">";
-    let adm = message.guild.roles.find("name", "Administrator");
+    let adm = message.guild.roles.find("name", "honda");
     if (!message.member.roles.has(adm.id)) {
 
     }
@@ -50,4 +50,4 @@ class WeeklyCommand extends Discord.Command {
 }
 }
 }
-  module.exports = WeeklyCommand;
+  module.exports = DailyCommand;

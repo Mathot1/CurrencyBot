@@ -9,9 +9,9 @@ class GiveCommand extends Discord.Command {
   constructor(client){
     super(client, {
       name: 'give',
-      group: 'random',
+      group: 'admin',
       memberName: 'give',
-      description: '**ADMIN ONLY** use to give someone cash'
+      description: 'Use to give someone cash'
     })
 
   }
@@ -19,7 +19,8 @@ class GiveCommand extends Discord.Command {
   async run(message, args){
 
     let adm = message.guild.roles.find("name", "honda");
-    if (!message.member.roles.has(adm.id)) {
+    let adm2 = message.guild.roles.find("name", "mad");
+    if (!message.member.roles.has(adm.id) && !message.member.roles.has(adm2.id)) {
 	return;
     }
     else {
@@ -39,10 +40,10 @@ class GiveCommand extends Discord.Command {
     money.updateBal(piece[0], piece[1], 0).then((i) => { // money.updateBal grabs the (userID, value) value being how much you want to add, and puts it into 'i'.
         if (piece[1] > 1){
 
-        message.channel.send(`**${piece[0]} got** ${piece[1]} **AssemblyCoins!**\n**New Balance:** ${i.money}`);
+        message.channel.send(`**${piece[0]} got** ${piece[1]} **assemblyCoins!**\n**New Balance:** ${i.money}`);
       }
       else if (piece[1] == 1) {
-          message.channel.send(`**${piece[0]} got** ${piece[1]} **AssemblyCoin!**\n**New Balance:** ${i.money}`);
+          message.channel.send(`**${piece[0]} got** ${piece[1]} **assemblyCoins!**\n**New Balance:** ${i.money}`);
       }
       else if (piece[1] < 1) {
           message.reply('**Wrong number!**');
