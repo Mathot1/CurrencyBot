@@ -12,20 +12,22 @@ class TimeCommand extends Discord.Command {
       name: 'time',
       group: 'random',
       memberName: 'time',
-      description: 'Check UTC time'
+      description: 'Check UTC, PST or your local time'
     })
 
   }
-
   async run(message, args){
-    if (args.content.toUpperCase() === `PST`){
-      moment.utc("dddd, h:mm:ss a");
+    //console.log(moment().utc().format("dddd, h:mm:ss a"));
+    args = args.toUpperCase();
+
+    if (args === `UTC`){
+    message.channel.send(moment().utc().format("dddd, h:mm:ss a"));
     }
-    else if (args.content.toUpperCase() === `PST`){
-      moment.pst("dddd, h:mm:ss a");
+    else if (args === `PST`){
+    message.channel.send(moment().utc().zone("-07:00").format("dddd, h:mm:ss a"));
     }
     else {
-      moment("dddd, h:mm:ss a");
+    message.channel.send(moment().format("dddd, h:mm:ss a"));
     }
 
 }
