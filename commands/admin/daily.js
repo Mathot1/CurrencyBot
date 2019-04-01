@@ -5,7 +5,7 @@ const ms = require('parse-ms');
 let cooldown = new Set();
 let cdseconds = 58800;
 global.coldown;
-class WeeklyCommand extends Discord.Command {
+class DailyCommand extends Discord.Command {
 
   constructor(client){
     super(client, {
