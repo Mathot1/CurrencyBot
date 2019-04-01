@@ -25,115 +25,63 @@ class WeeklyCommand extends Discord.Command {
     let assembler = message.guild.roles.find("name", "assembler"); //9
     let redd = message.guild.roles.find("name", "-,,``,."); //27
 
+
+    let czas = 604800;
+
+
     let autor = "<@" + message.author.id + ">";
+    let hajsik = money[autor];
     let adm = message.guild.roles.find("name", "honda");
     let adm2 = message.guild.roles.find("name", "mad");
-
-
-
-      if (message.member.roles.has(redd.id)){ //kropka przecinek kropka 27
-
-        if (money[message.author.username + message.guild.name] != moment().format('dddd')) {
-            money[message.author.username + message.guild.name] = moment().format('dddd')
-            money.updateBal(autor, 27).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
-                message.channel.send({embed: {
-                    color: 3447003,
-                    description: 'Recieved your **27** \`!weekly`\ assemblyCoins! Check \`!balance\`.',
-                    author: {
-                        name: `${message.author.username}#${message.author.discriminator}`,
-                        icon_url: message.author.avatarURL
-                    }
-                }});
-            });
-        } else {
-            message.channel.send({embed: {
-                color: 3447003,
-                description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
-                author: {
-                    name: `${message.author.username}#${message.author.discriminator}`,
-                    icon_url: message.author.avatarURL
-                }
-            }});
-        }
-}
-
-    else if (message.member.roles.has(assembler.id)){ //assembler 9
-
-        if (money[message.author.username + message.guild.name] != moment().format('dddd')) {
-            money[message.author.username + message.guild.name] = moment().format('dddd')
-            money.updateBal(autor, 9).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
-                message.channel.send({embed: {
-                    color: 3447003,
-                    description: 'Recieved your **9** \`!weekly`\ assemblyCoins! Check \`!balance\`.',
-                    author: {
-                        name: `${message.author.username}#${message.author.discriminator}`,
-                        icon_url: message.author.avatarURL
-                    }
-                }});
-            });
-        } else {
-            message.channel.send({embed: {
-                color: 3447003,
-                description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
-                author: {
-                    name: `${message.author.username}#${message.author.discriminator}`,
-                    icon_url: message.author.avatarURL
-                }
-            }});
-        }
-}
-
-        else if (message.member.roles.has(mod.id) ||message.member.roles.has(og.id)){ //mod i og 5
-
-              if (money[message.author.username + message.guild.name] != moment().format('dddd')) {
-                  money[message.author.username + message.guild.name] = moment().format('dddd')
-                  money.updateBal(autor, 5).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
-                      message.channel.send({embed: {
-                          color: 3447003,
-                          description: 'Recieved your **5** \`!weekly`\ assemblyCoins! Check \`!balance\`.',
-                          author: {
-                              name: `${message.author.username}#${message.author.discriminator}`,
-                              icon_url: message.author.avatarURL
-                          }
-                      }});
-                  });
-              } else {
-                  message.channel.send({embed: {
-                      color: 3447003,
-                      description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
-                      author: {
-                          name: `${message.author.username}#${message.author.discriminator}`,
-                          icon_url: message.author.avatarURL
-                      }
-                  }});
-              }
-}
-else if (message.member.roles.has(helper.id) ||message.member.roles.has(birb.id)){ //birb i helper 3
-
-  if (money[message.author.username + message.guild.name] != moment().format('dddd')) {
-      money[message.author.username + message.guild.name] = moment().format('dddd')
-      money.updateBal(autor, 3).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
+    if (!message.member.roles.has(adm.id) && !message.member.roles.has(adm2.id)) {
+	return;
+    }
+    function zxp (x){
+      if (money[autor] === undefined){
+        money[autor] = moment().format('YYYYMMDD');
+      }
+console.log(money[autor] + " 1");
+//undefined
+      if (money[autor] <= moment().format('YYYYMMDD')) { //pomysl wszystko na liczby i wieksze rowne moment 7 days after
+          console.log(money[autor] + " 2");
+          money[autor] = moment().add(7, 'days').format('YYYYMMDD');
+          console.log(money[autor] + " 3");
+          money.updateBal(autor, x).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
+              message.channel.send({embed: {
+                  color: 3447003,
+                  description: 'Recieved your **'+ x +'** \`!weekly`\. Check \`!balance\`.',
+                  author: {
+                      name: `${message.author.username}#${message.author.discriminator}`,
+                      icon_url: message.author.avatarURL
+                  }
+              }});
+          })
+      } else {
           message.channel.send({embed: {
               color: 3447003,
-              description: 'Recieved your **3** \`!weekly`\ assemblyCoins! Check \`!balance\`.',
+              description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
               author: {
                   name: `${message.author.username}#${message.author.discriminator}`,
                   icon_url: message.author.avatarURL
               }
           }});
-      });
-  } else {
-      message.channel.send({embed: {
-          color: 3447003,
-          description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
-          author: {
-              name: `${message.author.username}#${message.author.discriminator}`,
-              icon_url: message.author.avatarURL
-          }
-      }});
-  }
+      }
 }
 
+if (message.member.roles.has(redd.id)){
+zxp(27);
+
+}
+else if (message.member.roles.has(assembler.id)){
+zxp(9);
+
+}
+else if (message.member.roles.has(mod.id) || message.member.roles.has(og.id)){
+zxp(5);
+}
+else if (message.member.roles.has(birb.id) || message.member.roles.has(helper.id)){
+zxp(3);
+}
 
 
 }

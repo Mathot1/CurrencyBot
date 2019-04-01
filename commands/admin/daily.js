@@ -24,8 +24,10 @@ class DailyCommand extends Discord.Command {
 
     }
     else {
-              if (money[message.author.username + message.guild.name] != moment().format('L')) {
-                  money[message.author.username + message.guild.name] = moment().format('L')
+              console.log(money[autor]);
+              if (money[autor] != moment().format('L')) {
+                  money[autor] = moment().format('L')
+console.log(money[autor]);
                   money.updateBal(autor, 20).then((i) => { // The daily ends of the day, so everyday they can get a daily bonus, if they missed it, they can't get it back again.
                       message.channel.send({embed: {
                           color: 3447003,
