@@ -31,11 +31,32 @@ class WeeklyCommand extends Discord.Command {
 
     let autor = "<@" + message.author.id + ">";
     let hajsik = money[autor];
-    let adm = message.guild.roles.find("name", "honda");
-    let adm2 = message.guild.roles.find("name", "mad");
-    if (!message.member.roles.has(adm.id) && !message.member.roles.has(adm2.id)) {
-	return;
+
+    args = args.toUpperCase();
+
+    if (args === "info"){ //zmien na duze
+
+      message.channel.send({"embed":{
+      title:"Item shop",
+      color: 3442003,
+      fields:[{
+      name: "**Role name**",
+      value:  "3\n5\n9\n27",
+      inline:true
+
+    },
+    {
+     name:"**Weekly assemblyBoins**",
+     value: birb +" and"+ helper+"\n" + mod + " and" + og+"\n" + assembler+"\n" + redd,
+     inline:true
+   }
+  ]
+
+
+  }})
+  return;
     }
+
     function zxp (x){
       if (money[autor] === undefined){
         money[autor] = moment().format('YYYYMMDD');
