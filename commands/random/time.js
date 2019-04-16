@@ -27,7 +27,7 @@ class TimeCommand extends Discord.Command {
     message.channel.send(moment().utc().zone("-07:00").format("dddd, h:mm:ss a"));
     }
     else {
-    message.channel.send(moment().format("dddd, h:mm:ss a"));
+      message.channel.send("Use **!time pst** or **!time utc** to check time");
     }
 
 }

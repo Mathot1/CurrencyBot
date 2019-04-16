@@ -34,10 +34,10 @@ class WeeklyCommand extends Discord.Command {
 
     args = args.toUpperCase();
 
-    if (args === "info"){ //zmien na duze
+    if (args === "INFO"){ //zmien na duze
 
       message.channel.send({"embed":{
-      title:"Item shop",
+      title:"Weekly",
       color: 3442003,
       fields:[{
       name: "**Role name**",
@@ -46,7 +46,7 @@ class WeeklyCommand extends Discord.Command {
 
     },
     {
-     name:"**Weekly assemblyBoins**",
+     name:"**Weekly assemblyCoins**",
      value: birb +" and"+ helper+"\n" + mod + " and" + og+"\n" + assembler+"\n" + redd,
      inline:true
    }
@@ -78,9 +78,19 @@ console.log(money[autor] + " 1");
               }});
           })
       } else {
+        let tab12 = [];
+        for (let i = 0; i < 8; i++){
+          if (i == 3 || i == 5){
+            tab12[i] = money[autor][i] + "-";
+          }
+          else {
+            tab12[i] = money[autor][i];
+          }
+
+        }
           message.channel.send({embed: {
               color: 3447003,
-              description: 'You already recieved your \`!weekly`\. Check later.', // When you got your daily already, this message will show up.
+              description: 'You already recieved your \`!weekly`\. Check on: ' + tab12[0]  + tab12[1] + tab12[2] + tab12[3] + tab12[4] + tab12[5] + tab12[6] + tab12[7], // When you got your daily already, this message will show up.
               author: {
                   name: `${message.author.username}#${message.author.discriminator}`,
                   icon_url: message.author.avatarURL
