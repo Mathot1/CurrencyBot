@@ -9,7 +9,7 @@
     client.registry.registerGroup('admin', 'Admin');
     client.registry.registerDefaults();
     client.registry.registerCommandsIn(__dirname + "/commands");
-      // This runs when a message is recieved...
+      
 let prefix = '!';
 const time = setInterval(function(){ console.log('<<< 3 hours >>>');},10800000);
 
@@ -25,11 +25,11 @@ const time = setInterval(function(){ console.log('<<< 3 hours >>>');},10800000);
     client.on('message', message => {
 
 
-              // Example: Fetching Balance
+              
               if (message.content.toUpperCase() === `${prefix}TESTT`) {
 
-                // money.fetchBal grabs the userID, finds it, and puts it into 'i'.
-                      message.channel.send(`test`);
+               
+                     // message.channel.send(`test`);
 
 
 
