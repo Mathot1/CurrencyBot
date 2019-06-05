@@ -41,4 +41,4 @@ const time = setInterval(function(){ console.log('<<< 3 hours >>>');},10800000);
 
 
 
-client.login("NTQzOTA3MDc3OTUzNjgzNDk0.D2aM0w._uyu3XAVdbbN8Al7lOwX1fxQw3o");
+client.login("XXXXXXXXXXXXXXXXXXXXXXXXXXX");
